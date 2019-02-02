@@ -27,3 +27,17 @@ if chartered.has_pullRequest:
     Rule_Change(Pull_Request)
     if Pull_Request.maxTime() > SystemTime.now():
       Pull_Request.dismiss()
+
+# Portal should not deny use by a donating Member of morethan 1 unit
+def neverDenyUse(Player):
+  if chartered.member(Player).donate >= 10000:
+    return true
+  else:
+    return false
+
+# Should not tax income from non guild territory
+def shouldTax(Position):
+  if chartered.terriory(Position):
+    return true
+  else:
+    return false
