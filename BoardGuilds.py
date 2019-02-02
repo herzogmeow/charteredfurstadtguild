@@ -1,0 +1,1 @@
+boardGuilds = [DiceInvesting,Travellers]
