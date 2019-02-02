@@ -6,7 +6,7 @@ import BoardGuilds
 chartered = CharteredGuild("Chartered Furstadt Guild")
 
 chartered.member.load(memberList,"Member")
-chartered.member.load(BoardGuilds, "BoardGuilds")
+chartered.member.load(boardGuilds, "BoardGuilds")
 
 def Rule_Change(Pull_Request):
   AssemblyDecision = false
